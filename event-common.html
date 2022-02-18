@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-Events</title>
+  </head>
+  <body>
+      <p id="clicking-method"></p>
+      <input id="comment-field" type="text">
+      <button id="comment">Comment</button>
+      <button onclick="justFunction()">Just Function</button>
+      <button id="direct-event-handler">direct add Event Listener</button>
+
+    <script src="js/events.js"></script>
+    <script>
+        function justFunction() {
+            const p = document.getElementById('clicking-method');
+            p.innerText = 'set by using just function';
+        }
+
+        //using direct event handler
+        document.getElementById('direct-event-handler').addEventListener('click', function () {
+            const p = document.getElementById('clicking-method');
+            p.innerText = 'direct event handler function'
+        })
+
+        //direct comment function
+        document.getElementById('comment').addEventListener('click', function () {
+            const commentField = document.getElementById('comment-field');
+
+            const p = document.getElementById('clicking-method');
+            p.innerText = commentField.value; //value for input field
+            commentField.value = ''; //white space for clear input field after update
+        })
+    </script>
+  </body>
+</html>

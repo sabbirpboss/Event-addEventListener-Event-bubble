@@ -1,4 +1,4 @@
-//method 01
+//method 01 *** uses most of the time
 //standard system for call a function-event handler
 function makeRed() {
   document.body.style.backgroundColor = "red";
@@ -33,7 +33,7 @@ orangeButton.addEventListener('click',  function makeGreen() {
   document.body.style.backgroundColor = 'orange';
 })
 
-//method - 06
+//method - 06 *** uses most of the time
 //direct shortcurt
 document.getElementById('make-indigo-button').addEventListener('click', function makeIndigo() {
   document.body.style.backgroundColor = 'indigo';
