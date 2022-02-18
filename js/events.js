@@ -13,7 +13,28 @@ function makeBlue() {
 }
 
 //method - 03
+//anonymous function
 const tomatoButton = document.getElementById("make-tomato-button");
 tomatoButton.onclick = function makeTomato() {
   document.body.style.backgroundColor = 'tomato';
 };
+
+//method - 04
+//using addEventListener on a button
+const greenButton = document.getElementById("make-green-button");
+greenButton.addEventListener('click', makeGreen) 
+function makeGreen() {
+  document.body.style.backgroundColor = 'green';
+}
+
+//method - 05
+const orangeButton = document.getElementById('make-orange-button');
+orangeButton.addEventListener('click',  function makeGreen() {
+  document.body.style.backgroundColor = 'orange';
+})
+
+//method - 06
+//direct shortcurt
+document.getElementById('make-indigo-button').addEventListener('click', function makeIndigo() {
+  document.body.style.backgroundColor = 'indigo';
+})
