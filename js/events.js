@@ -13,7 +13,7 @@ function makeBlue() {
 }
 
 //method - 03
-const blueButton = document.getElementById("make-blue-button");
-blueButton.onclick = function makeBlue() {
-  document.body.style.backgroundColor = "blue";
+const tomatoButton = document.getElementById("make-tomato-button");
+tomatoButton.onclick = function makeTomato() {
+  document.body.style.backgroundColor = 'tomato';
 };
