@@ -38,3 +38,25 @@ orangeButton.addEventListener('click',  function makeGreen() {
 document.getElementById('make-indigo-button').addEventListener('click', function makeIndigo() {
   document.body.style.backgroundColor = 'indigo';
 })
+
+//===============eventcommon.html================
+
+function justFunction() {
+  const p = document.getElementById('clicking-method');
+  p.innerText = 'set by using just function';
+}
+
+//using direct event handler
+document.getElementById('direct-event-handler').addEventListener('click', function () {
+  const p = document.getElementById('clicking-method');
+  p.innerText = 'direct event handler function'
+})
+
+//direct comment function
+document.getElementById('comment').addEventListener('click', function () {
+  const commentField = document.getElementById('comment-field');
+
+  const p = document.getElementById('clicking-method');
+  p.innerText = commentField.value; //value for input field
+  commentField.value = ''; //white space for clear input field after update
+})
